@@ -5,3 +5,7 @@ dist
 .cache
 .DS_Store
 *.pem
+
+# my created
+**/.aws-sam
+samconfig.toml
