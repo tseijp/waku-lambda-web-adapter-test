@@ -16,7 +16,7 @@ npm create waku@latest
 cd my-app
 ```
 
-### Create 3 file
+### Create 4 file
 
 - Makefile
 - run.sh
@@ -32,6 +32,7 @@ sam build
 sam local invoke --region ap-northeast-1
 sam deploy --guided
 ```
+
 ### Connect to CI/CD
 
 ```
