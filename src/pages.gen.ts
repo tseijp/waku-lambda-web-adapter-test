@@ -1,11 +1,17 @@
 import type { PathsForPages, GetConfigResponse } from 'waku/router';
 
-import type { getConfig as About_getConfig } from './pages/about';
-import type { getConfig as Index_getConfig } from './pages/index';
 
 type Page =
-| ({path: '/about'} & GetConfigResponse<typeof About_getConfig>)
-| ({path: '/'} & GetConfigResponse<typeof Index_getConfig>)
+| {path: '/apis/[api]/create'; render: 'dynamic'}
+| {path: '/apis/[api]'; render: 'dynamic'}
+| {path: '/apis/[api]/setting'; render: 'dynamic'}
+| {path: '/apis/[api]/update/[id]'; render: 'dynamic'}
+| {path: '/apis/[api]/update/[update]'; render: 'dynamic'}
+| {path: '/apis/create'; render: 'dynamic'}
+| {path: '/apis'; render: 'dynamic'}
+| {path: '/'; render: 'dynamic'}
+| {path: '/media/[id]'; render: 'dynamic'}
+| {path: '/media'; render: 'dynamic'}
 ;
 
   declare module 'waku/router' {
