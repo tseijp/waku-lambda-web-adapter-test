@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .hidden-scrollbar {
+    -ms-overflow-style: none; /* IE, Edge 対応 */
+    scrollbar-width: none; /* Firefox 対応 */
+  }
+  .hidden-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari 対応 */
+  }
+}
+
+th,
+td {
+  flex: 1;
+  padding: 24px;
+  font-size: 14px;
+  min-width: 132px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+th {
+  border-bottom: solid 1px #e5e5f2;
+}
+
+.firstChild {
+  min-width: 96px;
+  max-width: 96px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+th:first-child > input,
+td:first-child > input {
+  scale: 1.5;
+  accent-color: #563bfe;
+}
+
+.background {
+  background-image: linear-gradient(
+    to bottom,
+    #21213b 0px,
+    #21213b 48px,
+    transparent 48px
+  );
+}
+
+@media (min-width: 1024px) {
+  .background {
+    background-image: linear-gradient(
+      to right,
+      #21213b 0px,
+      #21213b 60px,
+      #f8f9fd 60px,
+      #f8f9fd 260px,
+      transparent 260px
+    );
+  }
+}
+
+.kebabu {
+  width: 4px;
+  height: 4px;
+  background-color: #9393b2;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+}
+
+.kebabu::before,
+.kebabu::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.kebabu::before {
+  top: 6px;
+}
+
+.kebabu::after {
+  bottom: 6px;
+}
+
+.kebabu::after,
+.kebabu::before,
+.kebabu {
+  background-color: currentColor;
+}
+
+.down {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.down::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+}

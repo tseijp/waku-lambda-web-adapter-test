@@ -9,3 +9,5 @@ dist
 # my created
 **/.aws-sam
 samconfig.toml
+*.sqlite*
+
